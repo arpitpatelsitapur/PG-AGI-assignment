@@ -12,7 +12,7 @@ Developed as part of the AI/ML Intern Assignment.
 
 ## Setup
 ```bash
-git clone <repo>
+git clone https://github.com/arpitpatelsitapur/PG-AGI-assignment
 cd "PG-AGI-ASSIGNMENT"
 pip install -r requirements.txt
 ```
