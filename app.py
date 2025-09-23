@@ -301,7 +301,7 @@ for msg in st.session_state.conversation:
 
 # If chat not started
 if not st.session_state.chat_started:
-    st.info("Fill candidate details on the left and click **Start Chat**. The interview will appear here.")
+    st.info("Fill candidate details on the left and click **Start Chat**. The Questions will appear here.")
     st.stop()
 
 # If interview finished
