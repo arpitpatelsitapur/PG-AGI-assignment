@@ -1,0 +1,47 @@
+# =========================
+# Python
+# =========================
+*.py[cod]          # Python compiled files
+__pycache__/       # Python cache folders
+*.so               # Shared objects
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# =========================
+# Virtual environments
+# =========================
+myenv/
+venv/
+.env               # common env file
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/
+.streamlit/secrets.toml
+
+# =========================
+# MacOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+*.swp
+
+# =========================
+# IDEs / Editors
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
