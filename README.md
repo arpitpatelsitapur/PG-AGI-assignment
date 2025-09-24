@@ -33,7 +33,7 @@ TalentScout is an AI-powered hiring assistant chatbot that streamlines the techn
 
 ## Technical Details
 - **Languages & Frameworks:** Python, Streamlit
-- **AI Model:** Kimi-K2 by MoonShot (accessed via OpenRouter)
+- **AI Model:** Kimi-K2 by MoonShot (free, accessed via OpenRouter), use any as u wish.
 - **Architecture:**
   - Modular codebase (prompt generation, storage, UI)
   - Prompts adapt to candidate experience and tech stack
