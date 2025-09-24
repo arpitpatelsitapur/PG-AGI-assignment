@@ -3,7 +3,7 @@
 # TalentScout Hiring Assistant
 
 ## Project Overview
-TalentScout is an AI-powered hiring assistant chatbot that streamlines the technical interview process. Built with **Streamlit** and **Kimi-K2** (via OpenRouter), it collects candidate information, generates tailored technical questions for each declared tech stack, and simulates safe, anonymized data storage. The assistant adapts question difficulty based on candidate experience and provides a conversational UI for a smooth interview flow.
+TalentScout is an AI-powered hiring assistant chatbot that streamlines the technical interview process. Built with `Streamlit` and `Kimi-K2` (via OpenRouter), it collects candidate information, generates tailored technical questions for each declared tech stack, and simulates safe, anonymized data storage. The assistant adapts question difficulty based on candidate experience and provides a conversational UI for a smooth interview flow.
 
 ## Installation Instructions
 1. **Clone the repository:**
@@ -27,7 +27,7 @@ TalentScout is an AI-powered hiring assistant chatbot that streamlines the techn
 
 ## Usage Guide
 - Launch the app and fill in candidate details (name, email, phone, experience, role, location, tech stack) in the sidebar.
-- Select the number of technical questions per technology.
+- Select the number of technical questions per technology(by default 3).
 - The chatbot will ask one question at a time, collect answers, and provide feedback.
 - All candidate data is simulated and stored in-memory for privacy.
 

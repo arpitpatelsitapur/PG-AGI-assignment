@@ -38,13 +38,13 @@ class SimulatedStorage:
 # ---------------------------
 # Utility functions
 # ---------------------------
-def is_exit_command(text: str) -> bool:
+def is_exit_command(text: str):
     return text.lower().strip() in ["exit", "quit", "bye", "goodbye"]
 
-def validate_email(email: str) -> bool:
+def validate_email(email: str):
     return "@" in email and "." in email
 
-def validate_phone(phone: str) -> bool:
+def validate_phone(phone: str):
     digits = "".join([c for c in phone if c.isdigit()])
     return len(digits) >= 8
 
@@ -83,7 +83,7 @@ def reset():
     st.session_state.chat_started = False
 
 
-def safe_generate(prompt: str, retries: int = 3, backoff: float = 1.5) -> str:
+def safe_generate(prompt: str, retries: int = 3, backoff: float = 1.5):
     """
     Call the LLM generate method with retries and exponential backoff.
     Raises the final exception if all retries fail.
@@ -179,7 +179,7 @@ def fallback_questions_for_tech(tech: str, n: int, years_exp: float) -> List[Dic
     return [{"tech": tech, "question": q} for q in picked]
 
 
-def build_per_tech_prompt(tech: str, years_exp: float, n: int = 3) -> str:
+def build_per_tech_prompt(tech: str, years_exp: float, n: int = 3):
     """
     Build a prompt requesting n beginner/junior/mid-level questions for a single technology.
     The prompt is explicit about candidate experience so the LLM tailors difficulty.
