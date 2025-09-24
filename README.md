@@ -39,7 +39,7 @@ TalentScout is an AI-powered hiring assistant chatbot that streamlines the techn
   - Prompts adapt to candidate experience and tech stack
   - Simulated (in-memory) data storage for privacy compliance
 - **Libraries Used:**
-  - streamlit, openai, httpx, pandas, numpy, dotenv, tqdm, etc.
+  - streamlit, openai, pandas, numpy.
 
 ## Prompt Design
 Prompts are dynamically crafted to:
