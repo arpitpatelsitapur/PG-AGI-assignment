@@ -1,8 +1,9 @@
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://talentscout7.streamlit.app/)
 
 # TalentScout Hiring Assistant
 
 ## Project Overview
-TalentScout is an AI-powered hiring assistant chatbot that streamlines the technical interview process. Built with **Streamlit** and **DeepSeek** (via OpenRouter), it collects candidate information, generates tailored technical questions for each declared tech stack, and simulates safe, anonymized data storage. The assistant adapts question difficulty based on candidate experience and provides a conversational UI for a smooth interview flow.
+TalentScout is an AI-powered hiring assistant chatbot that streamlines the technical interview process. Built with **Streamlit** and **Kimi-K2** (via OpenRouter), it collects candidate information, generates tailored technical questions for each declared tech stack, and simulates safe, anonymized data storage. The assistant adapts question difficulty based on candidate experience and provides a conversational UI for a smooth interview flow.
 
 ## Installation Instructions
 1. **Clone the repository:**
@@ -17,7 +18,7 @@ TalentScout is an AI-powered hiring assistant chatbot that streamlines the techn
 3. **Configure API Key:**
 	- Create a file at `.streamlit/secrets.toml` with the following content:
 	  ```
-	  DEEPSEEKR1_API_KEY = "your_api_key_here"
+	  API_KEY = "your_api_key_here"
 	  ```
 4. **Run the app:**
 	```bash
@@ -32,7 +33,7 @@ TalentScout is an AI-powered hiring assistant chatbot that streamlines the techn
 
 ## Technical Details
 - **Languages & Frameworks:** Python, Streamlit
-- **AI Model:** DeepSeek (accessed via OpenRouter)
+- **AI Model:** Kimi-K2 by MoonShot (accessed via OpenRouter)
 - **Architecture:**
   - Modular codebase (prompt generation, storage, UI)
   - Prompts adapt to candidate experience and tech stack
