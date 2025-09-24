@@ -235,7 +235,7 @@ def generate_questions_for_stack(tech_stack: List[str], years_exp: float, per_te
 # ---------------------------
 # Sidebar: Candidate Info Form
 # ---------------------------
-with st.sidebar.form("candidate_form", clear_on_submit=False):
+with st.sidebar:
     st.header("Candidate Info (required)")
     full_name = st.text_input("Full Name", placeholder="e.g., Arpit Patel")
     email = st.text_input("Email", placeholder="e.g., arpit@example.com")
@@ -246,7 +246,17 @@ with st.sidebar.form("candidate_form", clear_on_submit=False):
     tech_stack_text = st.text_input("Tech Stack (comma-separated)", placeholder="e.g., Python, React, SQL")
     per_tech_n = st.slider("Questions per technology (3–5)", min_value=3, max_value=5, value=3)
 
-    start_chat = st.form_submit_button("Start Chat")
+    st.markdown("""
+        <style>
+        div.stButton > button:first-child {
+            background-color: #e53935 !important;
+            color: white !important;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    start_chat = st.button("Start Chat")
 
     if start_chat:
         # basic validation
@@ -292,12 +302,28 @@ with st.sidebar.form("candidate_form", clear_on_submit=False):
 # ---------------------------
 # Main: Chat interface
 # ---------------------------
-st.title("TalentScout — Interview Chat")
+st.markdown("""
+<h1 style='text-align: center; color: #009688; letter-spacing: 1px; font-weight: 800; text-shadow: 1px 1px 3px #009688;'>TalentScout — Interview Chat</h1>
+""", unsafe_allow_html=True)
 
 # Display conversation history (main page is just chat + final feedback)
 for msg in st.session_state.conversation:
-    with st.chat_message(msg["role"]):
-        st.markdown(msg["text"])
+    if msg["role"] == "user":
+        st.markdown(
+            "<div style='background:#fff3e0; color:#6d4c41; border-radius:12px; padding:14px 20px; margin:18px 0 18px auto; max-width:60%; display:inline-block; float:right; clear:both; text-align:right; font-size:1rem;'>"
+            + msg['text'] + "</div>",
+            unsafe_allow_html=True)
+    elif msg["role"] == "assistant":
+        if any(word in msg["text"].lower() for word in ["feedback", "evaluation", "well done", "good job", "suggestion", "improvement"]):
+            st.markdown(
+                "<div style='background:#e8f5e9; color:#256029; border-radius:12px; padding:14px 20px; margin:18px auto 18px 0; max-width:60%; display:inline-block; clear:both; font-size:1rem;'>"
+                + msg['text'] + "</div>",
+                unsafe_allow_html=True)
+        else:
+            st.markdown(
+                "<div style='background:#e6f0ff; color:#1a237e; border-radius:12px; padding:14px 20px; margin:18px auto 18px 0; max-width:60%; display:inline-block; clear:both; font-size:1rem;'>"
+                + msg['text'] + "</div>",
+                unsafe_allow_html=True)
 
 # If chat not started
 if not st.session_state.chat_started:
